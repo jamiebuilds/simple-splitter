@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Splitter</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="splitter-container">
+    <div class="splitter">
+
+      <div class="splitter-section splitter-section-left">
+        <div class="splitter-inner">
+
+          <iframe class="splitter-iframe" src="iframe.html" frameborder="0"></iframe>
+
+        </div>
+      </div>
+
+      <div class="splitter-handle">
+        <div class="splitter-snap splitter-snap-left"></div>
+        <div class="splitter-snap splitter-snap-right"></div>
+      </div>
+
+      <div class="splitter-section splitter-section-right">
+        <div class="splitter-inner">
+
+          <iframe class="splitter-iframe" src="iframe.html" frameborder="0"></iframe>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <script type="text/javascript" src="jquery.js"></script>
+  <script type="text/javascript" src="../splitter.js"></script>
+
+  <script>
+    $(function() {
+      $('.splitter').splitter({ initPos: 'center' });
+      $('.splitter').splitter('control', '.splitter-snap-left', 'left');
+      $('.splitter').splitter('control', '.splitter-snap-right', 'right');
+    });
+  </script>
+</body>
+</html>
